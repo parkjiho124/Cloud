@@ -1,0 +1,15 @@
+<script>
+var bigOne = document.getElementById('bigOne’); // 데이터베이스 레퍼런스 가져오기
+var dbRef = firebase.database().ref().child(＇text＇);
+dbRef.set( // 데이터 쓰기
+'Hello Firebase'
+)
+// 데이터베이스 새로운 값이 들어오면 이벤트 발생
+dbRef.on("value", function(snapshot) { // JavaScript 콘솔에 데이터 스냅샷 출력
+console.log(snapshot.val()); // 웹페이지에 데이터 스냅샷의 값 출력
+bigOne.innerText = snapshot.val();
+}, function (error) {
+console.log("Error: " + error.code);
+});
+//dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
