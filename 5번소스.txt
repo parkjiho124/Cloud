@@ -1,0 +1,27 @@
+과제02
+<5번.>
+
+#define green D0 // Led in NodeMCU at pin GPIO16 (D0).
+#define blue D2
+#define red D4
+void setup() {
+pinMode(green, OUTPUT); // set the digital pin as output.
+pinMode(blue, OUTPUT);
+pinMode(red, OUTPUT);
+}
+
+ void blinkLED(int ledPin, int delayTime){
+    digitalWrite(ledPin, HIGH);
+    delay(delayTime);          
+    digitalWrite(ledPin, LOW); 
+    delay(delayTime);   
+  }
+void loop() {
+ if(random(3)==0){
+   blinkLED(green, 300);         
+ } else if(random(3)==1){
+   blinkLED(blue, 300);  
+ }else{
+   blinkLED(red, 300);
+ }
+}

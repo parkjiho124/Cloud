@@ -1,0 +1,22 @@
+과제 02 
+<2번.>
+
+#define LED D0
+#define LED1 D2
+
+void setup() {
+pinMode(LED, OUTPUT);
+pinMode(LED1, OUTPUT);
+}
+void loop() {
+digitalWrite(LED, HIGH);
+delay(100);          
+digitalWrite(LED, LOW); 
+delay(100);         
+
+digitalWrite(LED1, HIGH);
+delay(100);          
+digitalWrite(LED1, LOW); 
+delay(100);         
+
+}

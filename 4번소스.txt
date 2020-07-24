@@ -1,0 +1,27 @@
+과제02
+<4번.>
+
+#define green D0
+#define blue D2
+#define red D4
+
+void setup() {
+pinMode(green, OUTPUT);
+pinMode(blue, OUTPUT);
+pinMode(red, OUTPUT);
+
+}
+
+void blinkLED(int ledPin, int delayTime){
+    digitalWrite(ledPin, HIGH);
+    delay(delayTime);          
+    digitalWrite(ledPin, LOW); 
+    delay(delayTime);
+  }
+  
+void loop() {
+blinkLED(green, 300);
+blinkLED(blue, 300);
+blinkLED(red, 300);
+
+}
